@@ -24,15 +24,15 @@
     $header = "From:".$_POST['email']." \r\n";
     $header .= "MIME-Version: 1.0\r\n";
     $header .= "Content-type: text/html\r\n";
-    
+
     $retval = mail ($to,$subject,$message,$header);
-    
+
     if( $retval == true ) {
       echo "Message sent successfully...";
     }else {
       echo "Message could not be sent...";
     }
-    
+
   // $contact->to = $receiving_email_address;
   // $contact->from_name = $_POST['name'];
   // $contact->from_email = $_POST['email'];

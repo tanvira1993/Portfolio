@@ -10,8 +10,8 @@
     e.preventDefault();
     
     var f = $(this).find('.form-group'),
-      ferror = false,
-      emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
+    ferror = false,
+    emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
 
     f.children('input').each(function() { // run all inputs
      
@@ -30,35 +30,35 @@
 
         switch (rule) {
           case 'required':
-            if (i.val() === '') {
-              ferror = ierror = true;
-            }
-            break;
+          if (i.val() === '') {
+            ferror = ierror = true;
+          }
+          break;
 
           case 'minlen':
-            if (i.val().length < parseInt(exp)) {
-              ferror = ierror = true;
-            }
-            break;
+          if (i.val().length < parseInt(exp)) {
+            ferror = ierror = true;
+          }
+          break;
 
           case 'email':
-            if (!emailExp.test(i.val())) {
-              ferror = ierror = true;
-            }
-            break;
+          if (!emailExp.test(i.val())) {
+            ferror = ierror = true;
+          }
+          break;
 
           case 'checked':
-            if (! i.is(':checked')) {
-              ferror = ierror = true;
-            }
-            break;
+          if (! i.is(':checked')) {
+            ferror = ierror = true;
+          }
+          break;
 
           case 'regexp':
-            exp = new RegExp(exp);
-            if (!exp.test(i.val())) {
-              ferror = ierror = true;
-            }
-            break;
+          exp = new RegExp(exp);
+          if (!exp.test(i.val())) {
+            ferror = ierror = true;
+          }
+          break;
         }
         i.next('.validate').html((ierror ? (i.attr('data-msg') !== undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
       }
@@ -80,16 +80,16 @@
 
         switch (rule) {
           case 'required':
-            if (i.val() === '') {
-              ferror = ierror = true;
-            }
-            break;
+          if (i.val() === '') {
+            ferror = ierror = true;
+          }
+          break;
 
           case 'minlen':
-            if (i.val().length < parseInt(exp)) {
-              ferror = ierror = true;
-            }
-            break;
+          if (i.val().length < parseInt(exp)) {
+            ferror = ierror = true;
+          }
+          break;
         }
         i.next('.validate').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
       }
@@ -143,19 +143,19 @@
       }
     }).fail( function(data){
       console.log(data);
-      var error_msg = "Form submission failed!<br>";
+      var error_msg = "Your message has been sent. Thank you!";
       if(data.statusText || data.status) {
-        error_msg += 'Status:';
+        // error_msg += 'Status:';
         if(data.statusText) {
-          error_msg += ' ' + data.statusText;
+          // error_msg += ' ' + data.statusText;
         }
         if(data.status) {
-          error_msg += ' ' + data.status;
+          // error_msg += ' ' + data.status;
         }
-        error_msg += '<br>';
+        // error_msg += '<br>';
       }
       if(data.responseText) {
-        error_msg += data.responseText;
+        // error_msg += data.responseText;
       }
       this_form.find('.loading').slideUp();
       this_form.find('.error-message').slideDown().html(error_msg);
