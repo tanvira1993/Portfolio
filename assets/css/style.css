@@ -134,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 /* Desktop Navigation */
 .nav-menu {
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
 .nav-menu * {
@@ -152,8 +152,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   color: #a8a9b4;
-  padding: 12px 15px;
-  margin-bottom: 8px;
+  padding: 10px 15px;
   transition: 0.3s;
   font-size: 15px;
 }
@@ -458,6 +457,7 @@ section {
   background: #e4edf9;
   padding: 5px 15px;
   display: inline-block;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -1067,6 +1067,11 @@ section {
   padding: 0;
 }
 
+.testimonial-info {
+  text-align: center;
+  padding-top: 15px;
+}
+
 @media (max-width: 768px) {
   .portfolio-details .portfolio-description h2 {
     width: 100%;
@@ -1109,4 +1114,47 @@ section {
     width: auto;
     padding-right: 20px 15px;
   }
+}
+
+.tag {
+  border-radius: 50px;
+  margin: 0 auto;
+  width: 80px;
+  padding: 4px 12px;
+  display: inline-block;
+  font-size: 12px;
+  color: white;
+}
+
+.tag-red{
+ background-color: rgb(228, 66, 66);
+}
+
+.tag-green {
+  background-color: rgb(54, 170, 54);
+}
+
+.tag-blue {
+  background-color: rgb(50, 50, 211);
+  
+}
+
+.tag-pink {
+  background-color: rgb(204, 39, 94);
+}
+
+.tag-orange {
+  background-color: rgb(223, 160, 43);
+}
+
+.tag-one {
+  background-color: rgb(44, 238, 70);
+}
+
+.tag-two {
+  background-color: rgba(20, 95, 182, 0.75);
+}
+
+.tag-three {
+  background-color: rgb(226, 60, 204);
 }
